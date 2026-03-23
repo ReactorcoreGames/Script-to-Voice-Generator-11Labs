@@ -199,21 +199,20 @@ class Tab4Builder:
 
         opts = self.config_manager.get_generation_options()
 
-        # Use clip continuity
+        # Use clip continuity (disabled — eleven_v3 does not support previous_request_ids yet)
         self._tab4_continuity_var = tk.BooleanVar(value=opts.get("use_continuity", True))
         cont_cb = ttk.Checkbutton(frame, text="Use clip continuity (previous_request_ids)",
                                    variable=self._tab4_continuity_var,
                                    command=self._on_tab4_continuity_changed,
-                                   bootstyle="info")
+                                   bootstyle="info", state="disabled")
         cont_cb.pack(anchor=W)
         _tip(cont_cb,
-             "Sends each clip's request ID to the next generation call for more natural\n"
-             "voice flow between consecutive lines. Recommended on.\n"
-             "Tracked per speaker — does not mix between different speakers.")
+             "Not yet supported by the eleven_v3 model — disabled until ElevenLabs adds V3 support.\n"
+             "When available, this will send each clip's request ID to the next generation call\n"
+             "for more natural voice flow between consecutive lines.")
         ttk.Label(frame,
-                  text="    Sends each clip's request ID to the next generation call for more natural voice flow between lines.\n"
-                       "    Tracked per speaker. Recommended on.",
-                  font=("Consolas", 9), foreground="#6B7280", justify=LEFT).pack(anchor=W, pady=(0, 8))
+                  text="    Not yet supported by eleven_v3. Will enable natural voice flow between lines once ElevenLabs adds V3 support.",
+                  font=("Consolas", 9), foreground="#7A4A4A", justify=LEFT).pack(anchor=W, pady=(0, 8))
 
         # Auto text normalization
         self._tab4_textnorm_var = tk.BooleanVar(

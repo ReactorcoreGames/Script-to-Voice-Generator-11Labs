@@ -6,6 +6,7 @@ Layout/build methods only — state/event methods are in gui_tab2_state.py.
 """
 
 import tkinter as tk
+import webbrowser
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
 
@@ -238,6 +239,23 @@ class Tab2Builder:
                                  bootstyle=INFO, width=3)
         restore_btn.pack(side=LEFT)
         _tip(restore_btn, "Restore the default test text:\n\"The quick brown fox jumps over the lazy dog.\"")
+
+        # Voice preview hint
+        hint_frame = ttk.Frame(frame)
+        hint_frame.pack(fill=X, pady=(6, 0))
+
+        ttk.Label(hint_frame,
+                  text="Tip: You can preview voices for free in the ElevenLabs web app \u2014 no credits used.",
+                  font=("Consolas", 9), foreground="#C49090").pack(anchor=W)
+
+        link_label = ttk.Label(hint_frame,
+                               text="\u2192 elevenlabs.io/app/speech-synthesis/text-to-speech",
+                               font=("Consolas", 9, "underline"),
+                               cursor="hand2",
+                               foreground="#C49090")
+        link_label.pack(anchor=W)
+        link_label.bind("<Button-1>", lambda e: webbrowser.open(
+            "https://elevenlabs.io/app/speech-synthesis/text-to-speech"))
 
     def _build_sfx_section(self, parent):
         """Build the sound effects folder/file section."""

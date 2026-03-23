@@ -245,8 +245,8 @@ class AudioGenerator:
                 "apply_text_normalization": apply_text_normalization,
             }
 
-            if previous_request_ids:
-                body["previous_request_ids"] = list(previous_request_ids)[-3:]
+            # previous_request_ids / next_text are not supported by eleven_v3
+            # (API returns 400 unsupported_model if included)
 
             if next_text is not None:
                 body["next_text"] = next_text
