@@ -1,12 +1,21 @@
+
+![11labs stvg promo](https://github.com/user-attachments/assets/aa52afe2-9fc5-4fa1-958c-1c657011a31b)
+
 # Script to Voice Generator — ElevenLabs V3 TTS
 
 Welcome to any script writing author out there!
 
 Convert formatted script files into fully voiced audio using **ElevenLabs V3 TTS** — a high-quality cloud text-to-speech engine with hundreds of voices and expressive audio tag support.
 
+**Get it here** - https://reactorcore.itch.io/script-to-voice-generator-elevenlabs-v3
+
 **Made by Reactorcore** — https://linktr.ee/reactorcore
 
 ---
+
+<img width="1920" height="1020" alt="stvg 11labs screenshot (1)" src="https://github.com/user-attachments/assets/812f0640-fb17-47ba-880e-399dc1f5c6a2" />
+
+<img width="1920" height="1020" alt="stvg 11labs screenshot (2)" src="https://github.com/user-attachments/assets/00aefc94-2eb3-40df-823b-5ccdebc91912" />
 
 ## What It Does
 
@@ -373,4 +382,5 @@ is correct and has the necessary permissions ("Unrestricted" is simplest).
 ## Links
 
 Check out everything else I do:
+
 https://linktr.ee/reactorcore
